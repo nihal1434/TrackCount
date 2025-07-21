@@ -1,10 +1,13 @@
-let saveEl = document.getElementById("save-el");
+let previousEntry = document.getElementById("previous-entry");
 let countEl = document.getElementById("count-el");
 let incrementBtn = document.getElementById("increment-btn");
 let saveBtn = document.getElementById("save-btn");
-let totalEntries= document.getElementById("Total-entry");
+let totalEntries = document.getElementById("total-entry"); // ✅ fixed case
+let resetBtn = document.getElementById("reset-btn");
+
 let count = 0;
-let total=0;
+let total = 0;
+
 incrementBtn.addEventListener("click", function () {
   count += 1;
   countEl.textContent = count;
@@ -13,10 +16,18 @@ incrementBtn.addEventListener("click", function () {
 saveBtn.addEventListener("click", function () {
   if (count > 0) {
     let countStr = count + " - ";
-    saveEl.textContent += countStr;
-    total+=count;
-    totalEntries.textContent =`Total Entries: ${total}`
+    previousEntry.textContent += countStr;
+    total += count;
+    totalEntries.textContent = `Total Entries: ${total}`;
     countEl.textContent = 0;
     count = 0;
   }
+});
+
+resetBtn.addEventListener("click", function () {
+  previousEntry.textContent = `Previous Entries:`;
+  totalEntries.textContent = `Total Entries: 0`;
+  countEl.textContent = 0;
+  count = 0;
+  total = 0;
 });
