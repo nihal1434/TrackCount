@@ -1,38 +1,56 @@
 body {
     background-image: url("trackanimeversion.png");
     background-size: cover;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-align: center;
     height: 100vh;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.mnd{
+
+.mnd {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
-    height: 100vh;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    /* transparent white */
+    backdrop-filter: blur(.5px);
+    /* glass blur effect */
+    height: 50vh;
+    width: 70vb;
+    border-radius: 10px;
 }
-h1,h2{
-     font-family: "Bangers", system-ui;
+
+h1,
+h2 {
+    font-family: "Bangers", system-ui;
     letter-spacing: 3px;
 }
-h1{
+
+h1 {
     font-size: 2.5rem;
 
 }
+
 h2 {
     font-size: 3.5rem;
     margin-top: 0;
     margin-bottom: 20px;
 }
-p{
-     font-weight: bold;
-     font-style: italic;
-     font-size: large;
+
+p {
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
 }
+
 button {
+    box-sizing: border-box;
     border: none;
     padding: 10px;
     font-weight: bold;
@@ -40,19 +58,28 @@ button {
     margin-bottom: 5px;
     border-radius: 5px;
     color: #ffffff;
+    font-size: .8rem;
 }
 
-#increment-btn {
+#increment-btn,
+#save-btn {
     background: #b24240;
 }
 
-#save-btn {
-    background:#b24240;
+#increment-btn:active,
+#save-btn:active {
+    background: #bd312f;
 }
-#reset-btn{
-    background-color:#887cc8;
+
+#reset-btn {
+    background-color: #887cc8;
 }
-.ipt-btn{
+
+#reset-btn:active {
+    background-color: #7568be;
+}
+
+.ipt-btn {
     display: flex;
     justify-content: space-between;
     gap: 20px;
